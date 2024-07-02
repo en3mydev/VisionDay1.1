@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VisionDay1.props" />
+</Project>

@@ -1,0 +1,6 @@
+@VisionDay1_HostAddress = http://localhost:5034
+
+GET {{VisionDay1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
