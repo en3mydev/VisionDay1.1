@@ -3,6 +3,8 @@ using VisionDay1.Models;
 using System;
 using Microsoft.AspNetCore;
 using VisionDay1.Services;
+using VisionDay1.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace VisionDay1
 {
@@ -18,7 +20,8 @@ namespace VisionDay1
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddSingleton<CatService>();
+            builder.Services.AddScoped<CatService>();
+            builder.Services.AddDbContext<DanielDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("localDb")));
 
             var app = builder.Build();
 

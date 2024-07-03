@@ -18,7 +18,7 @@ namespace VisionDay1.Controllers
         [HttpGet("GetCatNames")]
         public IEnumerable<Cat> Get()
         {
-            return _catService.GetAll().ToArray();
+            return _catService.GetAll();
         }
 
         [HttpPost("AddCat")]
