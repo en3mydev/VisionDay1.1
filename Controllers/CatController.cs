@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using VisionDay1.Models;
 using VisionDay1.Services;
 
@@ -40,6 +41,19 @@ namespace VisionDay1.Controllers
         {
             _catService.DeleteCat(id);
             return Ok();
+        }
+
+        [HttpGet("GetOdd")]
+        public IEnumerable<Cat> GetOdds()
+        {
+            return _catService.GetOdd();
+        }
+
+
+        [HttpGet("Pages")]
+        public IActionResult boo(int page, int noelements)
+        {
+            return Ok(_catService.returnPage(page - 1, noelements));
         }
     }
 }

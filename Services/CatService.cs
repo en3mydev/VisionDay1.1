@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using VisionDay1.Data;
 using VisionDay1.Models;
 namespace VisionDay1.Services { 
@@ -73,5 +74,18 @@ namespace VisionDay1.Services {
             _context.Remove(foundCat);
             _context.SaveChanges();
         }
+
+        public List<Cat> GetOdd()
+        {
+            var listx = _context.Cats.FromSql($"SELECT * FROM Cats WHERE MOD(Id, 2) <> 0").ToList();
+
+            return listx;
+        }
+
+        public List<Cat> returnPage(int page, int elements)
+        {
+            return _context.Cats.Skip<Cat>(page * elements).Take<Cat>(elements).ToList();
+        }
+
     }
 }
