@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jUl6tfBul93pPfHXQDNzyN71FWLzn7Pn1v+p/WDFjqUlq5CW3DU52QuGgIQ4e1Sn0ZgUfw3dblc0zSp/Yv8Hxg==",
+  "dgSpecHash": "gLFWd/iMc1FOQMgzSJaJc+YaEOPYbNwezdu6LW0beQ0cZqR+OhHFTEhbtP0D1VWX0ZZprjtka8sw8/wmR9sciA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Polimed\\VisionDay1\\VisionDay1\\VisionDay1.csproj",
+  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Polimed\\try3\\try3\\try3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.6\\microsoft.data.sqlite.core.8.0.6.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",

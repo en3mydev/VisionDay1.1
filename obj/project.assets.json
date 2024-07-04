@@ -1609,11 +1609,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\Polimed\\VisionDay1\\VisionDay1\\VisionDay1.csproj",
-      "projectName": "VisionDay1",
-      "projectPath": "C:\\Users\\Daniel\\Desktop\\Polimed\\VisionDay1\\VisionDay1\\VisionDay1.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\Polimed\\try3\\try3\\try3.csproj",
+      "projectName": "try3",
+      "projectPath": "C:\\Users\\Daniel\\Desktop\\Polimed\\try3\\try3\\try3.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel\\Desktop\\Polimed\\VisionDay1\\VisionDay1\\obj\\",
+      "outputPath": "C:\\Users\\Daniel\\Desktop\\Polimed\\try3\\try3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
