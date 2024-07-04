@@ -39,14 +39,8 @@ namespace VisionDay1.Services {
 
         public List<Cat> FindByName(string name)
         {
-            foreach (var cat in _context.Cats)
-            {
-                if (cat.Name == name)
-                {
-                    return _context.Cats.ToList();
-                }
-            }
-            return null;
+            return _context.Cats.Where(c => c.Name == name).ToList();
+
         }
 
         public void Update(int id, Cat cat2)
@@ -84,7 +78,7 @@ namespace VisionDay1.Services {
 
         public List<Cat> returnPage(int page, int elements)
         {
-            return _context.Cats.Skip<Cat>(page * elements).Take<Cat>(elements).ToList();
+            return _context.Cats.Skip(page * elements).Take(elements).ToList();
         }
 
     }
