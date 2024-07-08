@@ -19,11 +19,11 @@ namespace VisionDay1.Services {
         }
 
 
-        public List<Cat> getById(int id)
+        public Cat GetById(int id)
         {
-            _context.Cats.FirstOrDefault(x => x.Id == id);
-            return _context.Cats.ToList();
+            return _context.Cats.FirstOrDefault(x => x.Id == id);
         }
+
 
         public void Add(Cat cat)
         {

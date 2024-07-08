@@ -1,5 +1,4 @@
-
-using VisionDay1.Models;
+﻿using VisionDay1.Models;
 using System;
 using Microsoft.AspNetCore;
 using VisionDay1.Services;
@@ -23,6 +22,16 @@ namespace VisionDay1
             builder.Services.AddScoped<CatService>();
             builder.Services.AddDbContext<DanielDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("localDb")));
 
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowLocalhost3000",
+                    builder => builder
+                        .WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -34,11 +43,11 @@ namespace VisionDay1
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowLocalhost3000");
+
             app.UseAuthorization();
 
-
             app.MapControllers();
-
 
             app.Run();
         }

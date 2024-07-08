@@ -55,5 +55,16 @@ namespace VisionDay1.Controllers
         {
             return Ok(_catService.returnPage(page - 1, noelements));
         }
+
+        [HttpGet("{id}")]
+        public ActionResult<Cat> GetCatById(int id)
+        {
+            var cat = _catService.GetById(id);
+            if (cat == null)
+            {
+                return NotFound();
+            }
+            return Ok(cat);
+        }
     }
 }
